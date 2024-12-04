@@ -1,0 +1,30 @@
+body {
+    font-family:Kanit;
+}
+
+h2 {
+    border: 1.9px solid rgb(55, 148, 168);
+    border-radius: 3px;
+    border-top: dotted;
+    border-bottom: double;
+    margin-top: -10px;
+    
+}
+p {
+    font-size: 15pt;
+    color: rgb(13, 45, 70);
+    margin-top: -10px;
+    padding-left: 20px;
+    
+}
+input {
+    font-family: Kanit;
+}
+
+
+.class-p {
+    color: rgb(255, 108, 108);
+}
+#id-p { 
+    color: rgb(255, 165, 165);
+}
