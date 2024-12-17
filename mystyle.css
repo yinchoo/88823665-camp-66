@@ -1,7 +1,7 @@
-/* จัด header ให้อยู่ตรงกลาง */
+
 header {
     text-align: center;
-    color: rgb(69, 69, 69); /* กำหนดให้ข้อความในลิงก์เป็นสีขาว */
+    color: rgb(69, 69, 69); 
     background-color: #ffffff82;
     border: 1px  solid#00000068;
     padding: 1px;
@@ -9,7 +9,7 @@ header {
     font-size: 10pt;
 }
 
-/* จัด body ให้เป็น flexbox เพื่อช่วยจัด div tab อยู่กึ่งกลาง */
+
 body {
     font-family: Kanit;
     display: flex;
@@ -66,7 +66,7 @@ input [type="checkbox"]:hover {
 input[type="reset"]:hover , input[type="submit"]:hover {
   background-color: #6c6c6ccf;
   color: rgb(255, 255, 255);
-  cursor: pointer;  /* Adds a pointer cursor to show it's clickable */
+  cursor: pointer; 
 }
 
 table {
@@ -76,7 +76,7 @@ table {
 }
 
 td {
-    padding: 6px;  /* เว้นระยะบรรทัด */
+    padding: 4px;  /* เว้นระยะบรรทัด */
     vertical-align: middle;
 }
 
