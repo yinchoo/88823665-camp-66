@@ -30,6 +30,10 @@ Route::get("/mycontroller/{id?}",
 Route::get('/user', 
     [UserController::class, 'index']);
 
+Route::get('/500', function () {
+        abort(500); // บังคับให้ Laravel แสดงหน้า 500 Error
+    });
+
 
 Route::post("/mycontroller/{id?}", 
     [MyController::class, 'myfunction']);
