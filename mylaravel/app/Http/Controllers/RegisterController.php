@@ -20,6 +20,6 @@ class RegisterController extends Controller
         $obj_user -> password = $req -> password;
         $obj_user -> save();
 
-        return redirect('/user');
+        return redirect('/users');
     }
 }

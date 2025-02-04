@@ -27,8 +27,20 @@ Route::get("/mycontroller/{id?}",
     [MyController::class, 'myfunction']);
 
 
-Route::get('/user', 
+Route::get('/users', 
     [UserController::class, 'index']);
+Route::get('/user/{id}', 
+    [UserController::class, 'edit']);
+
+Route::put('/user', 
+    [UserController::class, 'edit_action']);
+
+Route::delete('/user', 
+    [UserController::class, 'delete']);
+
+
+
+
 
 Route::get('/500', function () {
         abort(500); // บังคับให้ Laravel แสดงหน้า 500 Error
