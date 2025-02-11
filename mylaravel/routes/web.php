@@ -7,6 +7,9 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 
+use App\Http\Middleware\CheckLogin;
+
+
 
 Route::get('/home',
     [HomeController::class, 'home']);
@@ -26,6 +29,22 @@ Route::post('/register',  [RegisterController::class, 'create']);
 Route::get("/mycontroller/{id?}", 
     [MyController::class, 'myfunction']);
 
+Route::get('/logout', function(){
+
+});
+
+Route::get('/product',
+    [ProductController::class,'index'])->middleware([CheckLogin::class,]);
+Route::post('/product',
+    [ProductController::class,'store'])->middleware([CheckLogin::class,]);
+
+
+Route::get('/',
+    [loginController::class,'index'])->middleware([CheckLogin::class]);
+Route::get('/login',
+    [loginController::class,'index']);
+Route::post('/login',
+    [loginController::class,'login']);
 
 Route::get('/users', 
     [UserController::class, 'index']);
@@ -37,9 +56,6 @@ Route::put('/user',
 
 Route::delete('/user', 
     [UserController::class, 'delete']);
-
-
-
 
 
 Route::get('/500', function () {
