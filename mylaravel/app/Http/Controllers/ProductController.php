@@ -23,7 +23,7 @@ class ProductController extends Controller
             $product = new ProductList;
             $product -> name = $value;
             $product -> category_id = $category -> id;
-            $product -> user_id =session('user') -> id;
+            $product -> user_id = session('user') -> id;
             $product -> save();
         }
         return redirect('/product');

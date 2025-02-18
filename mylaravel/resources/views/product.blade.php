@@ -1,5 +1,6 @@
 @extends('layouts.default_with_menu')   
 
+
 @section('content')
     <form action="{{ url('/product') }}" method="post">
         @csrf
@@ -33,11 +34,10 @@
         </thead>
         <tbody>
         <tr>
-
-                <td>1</td>
-                <td> $category_name </td>
+                <td> print_r($req-> $category_name); </td>
+                <td> print_r($category_name);</td>
                 <td> $product_name </td>
-                <td> dfms. </td>
+                <td> session(['user' => $user]); </td>
             </tr>
         </tbody>
     </table>

@@ -23,7 +23,7 @@ class LoginController extends Controller
             
             session()->forget('error');
             session(['user' => $user]);
-            return redirect('/');
+            return redirect('/product');
         } else {
             session(['error' => 'ข้อมูลการเข้าสู่ระบบไม่ถูกต้อง']); 
             return redirect('/login');
