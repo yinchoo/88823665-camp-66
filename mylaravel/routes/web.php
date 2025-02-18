@@ -54,8 +54,8 @@ Route::put('/user',
     [UserController::class, 'edit_action']);
 Route::delete('/user', 
     [UserController::class, 'delete']);
-Route::get('/product',
-    [ProductController::class,'index']);
+Route::get('/product', [ProductController::class, 'index'])->name('product.index');
+
 Route::post('/product',
     [ProductController::class,'add_product']);
 });

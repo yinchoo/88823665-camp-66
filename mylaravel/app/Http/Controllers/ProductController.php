@@ -9,10 +9,11 @@ use App\Models\ProductList;
 class ProductController extends Controller
 {
     //
-    function index(){
-        return view('product');
-        
+    public function index() {
+        $products = ProductList::with('category', 'user')->get(); // ดึงข้อมูลทั้งหมด
+        return view('product', compact('products')); // ส่งข้อมูลไปยัง View
     }
+    
     function add_product(Request $req){
         // dd($req->all()); 
         $category = new Category();

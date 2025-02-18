@@ -21,26 +21,26 @@
             <button class="btn btn-success mt-3" type="submit">บันทึก</button>
     </form>
     <table class="mt-3 table">
-        <thead>
-            <tr>
-                <td>#</td>
-                
-                <td>Category Name</td>
-
-                <td>Product Name</td>
-
-                <td>User Name</td>
-            </tr>
-        </thead>
-        <tbody>
+    <thead>
         <tr>
-                <td> print_r($req-> $category_name); </td>
-                <td> print_r($category_name);</td>
-                <td> $product_name </td>
-                <td> session(['user' => $user]); </td>
-            </tr>
-        </tbody>
-    </table>
+            <td>#</td>
+            <td>Category Name</td>
+            <td>Product Name</td>
+            <td>User Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($products as $index => $product)
+        <tr>
+            <td>{{ $index + 1 }}</td>
+            <td>{{ $product->category->name ?? 'No Category' }}</td>
+            <td>{{ $product->name }}</td>
+            <td>{{ $product->user->name ?? 'No User' }}</td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+
 @endsection
 
 @section('scripts')
