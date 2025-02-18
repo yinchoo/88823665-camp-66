@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
   <!--begin::Head-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>AdminLTE 4 | Login Page</title>
